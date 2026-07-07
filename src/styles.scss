@@ -1,0 +1,127 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --bg-primary: oklch(17% 0.01 260);
+  --bg-secondary: oklch(22% 0.01 260);
+  --bg-tertiary: oklch(27% 0.01 260);
+
+  --text-primary: oklch(96% 0.01 260);
+  --text-secondary: oklch(75% 0.01 260);
+
+  --border: oklch(35% 0.01 260);
+
+  --income: oklch(70% 0.18 150);
+  --expense: oklch(65% 0.22 25);
+  --accent: oklch(68% 0.18 250);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+body {
+  /* 4. Increase line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: Inter, sans-serif;
+
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.layout {
+  display: grid;
+
+  height: 100vh;
+
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: 72px 1fr;
+
+  grid-template-areas:
+    'header header'
+    'sidebar main';
+}
+
+.panel {
+  border: 1px solid var(--border);
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+}
+
+.panel__header {
+  padding: 1rem 2rem;
+}
+
+.panel__title {
+  font-size: 1rem;
+}
+
+.panel__subtitle {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}

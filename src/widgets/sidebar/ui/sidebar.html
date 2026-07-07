@@ -1,0 +1,24 @@
+<aside class="sidebar">
+  <nav class="nav">
+    <ul class="nav__list">
+      @for (item of navbarItems; track $index) {
+        <li>
+          <a [routerLink]="item.routerLink" routerLinkActive="active-link" class="nav__link">
+            <svg class="nav__link-icon">
+              <use [attr.href]="`sprite.svg#${item.icon}`"></use>
+            </svg>
+            <span>{{ item.title }}</span>
+          </a>
+        </li>
+      }
+    </ul>
+  </nav>
+  <a [routerLink]="['profile']" class="sidebar__footer">
+    <img
+      src=""
+      alt=""
+      class="profile__avatar"
+    />
+    <span class="profile__name">Bob Jackson</span>
+  </a>
+</aside>

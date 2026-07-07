@@ -1,0 +1,57 @@
+:host {
+  grid-area: header;
+}
+
+.header {
+  display: flex;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 2rem;
+
+  height: 100%;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  width: fit-content;
+}
+
+.logo__title {
+  font-size: 1rem;
+}
+
+.logo__icon {
+  width: 24px;
+  height: 24px;
+}
+
+.header__profile {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  margin-left: auto;
+}
+
+.profile__name {
+  font-weight: 600;
+}
+
+.profile__avatar {
+  background-color: var(--bg-tertiary);
+
+  border-radius: 999px;
+
+  width: 40px;
+  height: 40px;
+
+  object-fit: cover;
+}

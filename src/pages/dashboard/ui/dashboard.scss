@@ -1,0 +1,45 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  padding: 1.5rem 1rem;
+}
+
+.card-block__title {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.card-block__balance {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.stats-grid {
+  display: grid;
+  gap: 2rem;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.panels-grid {
+  display: grid;
+  gap: 2rem;
+
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    'transactions spendings'
+    'transactions goals';
+}

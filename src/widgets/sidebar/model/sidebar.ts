@@ -16,7 +16,7 @@ export class Sidebar {
     },
     {
       title: 'Transactions',
-      icon: 'transaction',
+      icon: 'credit-card',
       routerLink: ['transactions'],
     },
     {

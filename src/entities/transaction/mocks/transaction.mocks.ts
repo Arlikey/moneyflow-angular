@@ -1,0 +1,38 @@
+export const MOCKS_TRANSACTIONS: Transaction[] = [
+  {
+    id: "1fe3ebd4543",
+    type: 'income',
+    amount: 231.80,
+    categoryId: 'Gifting',
+    currency: 'USD',
+    date: new Date(),
+    description: 'Gift',
+  },
+  {
+    id: '64ed2gbv64',
+    type: 'expense',
+    amount: 9.99,
+    categoryId: 'Shopping',
+    currency: 'USD',
+    date: new Date(),
+    description: 'Groceries',
+  },
+  {
+    id: '123vvfg829',
+    type: 'income',
+    amount: 2000,
+    categoryId: 'Work',
+    currency: 'USD',
+    date: new Date(),
+    description: 'Salary',
+  },
+  {
+    id: '1231sdasvcvf',
+    type: 'expense',
+    amount: 5.99,
+    categoryId: 'Entertainment',
+    currency: 'USD',
+    date: new Date(),
+    description: 'Discord Nitro',
+  },
+];

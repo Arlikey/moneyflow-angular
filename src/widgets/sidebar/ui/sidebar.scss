@@ -9,11 +9,25 @@
 
   height: 100%;
   padding-inline: 1rem;
-  padding-block: 2rem;
+  padding-block-start: 2rem;
 
   border-right: 1px solid var(--border);
 
   background-color: var(--bg-secondary);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav__label {
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  font-size: 12px;
+  letter-spacing: 10%;
+  padding: 0 1rem;
 }
 
 .nav__list {

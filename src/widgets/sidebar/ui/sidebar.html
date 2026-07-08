@@ -1,5 +1,6 @@
 <aside class="sidebar">
   <nav class="nav">
+    <div class="nav__label">overview</div>
     <ul class="nav__list">
       @for (item of navbarItems; track $index) {
         <li>
@@ -13,12 +14,4 @@
       }
     </ul>
   </nav>
-  <a [routerLink]="['profile']" class="sidebar__footer">
-    <img
-      src=""
-      alt=""
-      class="profile__avatar"
-    />
-    <span class="profile__name">Bob Jackson</span>
-  </a>
 </aside>

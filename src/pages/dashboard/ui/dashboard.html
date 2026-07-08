@@ -1,17 +1,41 @@
 <section class="stats-grid">
-  <article class="card-block">
-    <p class="card-block__title">Total balance</p>
-    <strong class="card-block__balance"><span class="card-block__currency">$</span>3,289.00</strong>
+  <article class="card">
+    <div class="card__top">
+      <p class="card__title">Total balance</p>
+      <div class="card__icon card__balance">
+        <svg><use href="sprite.svg#credit-card"></use></svg>
+      </div>
+    </div>
+    <strong class="card__value">{{ transactionService.totalBalance() | currency: 'USD' }}</strong>
   </article>
 
-  <article class="card-block">
-    <p class="card-block__title">Monthly income</p>
-    <strong class="card-block__balance"><span class="card-block__currency">$</span>1,244.32</strong>
+  <article class="card">
+    <div class="card__top">
+      <p class="card__title">Monthly income</p>
+      <div class="card__icon card__income">
+        <svg><use href="sprite.svg#arrow-up"></use></svg>
+      </div>
+    </div>
+    <strong class="card__value">{{ transactionService.totalIncome() | currency: 'USD' }}</strong>
   </article>
 
-  <article class="card-block">
-    <p class="card-block__title">Monthly expenses</p>
-    <strong class="card-block__balance"><span class="card-block__currency">$</span>562.00</strong>
+  <article class="card">
+    <div class="card__top">
+      <p class="card__title">Monthly expenses</p>
+      <div class="card__icon card__expenses">
+        <svg><use href="sprite.svg#arrow-down"></use></svg>
+      </div>
+    </div>
+    <strong class="card__value">{{ transactionService.totalExpense() | currency: 'USD' }}</strong>
+  </article>
+  <article class="card">
+    <div class="card__top">
+      <p class="card__title">Savings rate</p>
+      <div class="card__icon card__savings">
+        <svg><use href="sprite.svg#hand-coins"></use></svg>
+      </div>
+    </div>
+    <strong class="card__value">{{ transactionService.savingsRate() | percent }}</strong>
   </article>
 </section>
 <section class="panels-grid">

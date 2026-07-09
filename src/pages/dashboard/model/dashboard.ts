@@ -13,4 +13,9 @@ import { CurrencyPipe, PercentPipe } from '@angular/common';
 })
 export class Dashboard {
   transactionService = inject(TransactionService);
+
+  metadata = {
+    title: 'Dashboard',
+    subtitle: "Here's what's happening with your money",
+  };
 }

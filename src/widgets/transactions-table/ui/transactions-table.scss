@@ -1,0 +1,67 @@
+.table {
+  border-color: var(--border);
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.table__row-header {
+  text-transform: uppercase;
+  letter-spacing: 10%;
+  font-size: 0.7rem;
+  font-weight: 500;
+
+  padding: 0.5rem 2rem;
+
+  cursor: pointer;
+}
+
+.table__row:not(:last-child) {
+  border-bottom: 1px solid var(--border);
+}
+
+.table__row-data {
+  padding: 1rem 2rem;
+}
+
+.table__row {
+  transition: 0.2s ease;
+}
+
+.table__row:hover {
+  background-color: oklch(from var(--bg-tertiary) l c h / 30%);
+}
+
+.table td:not(:last-child),
+.table th:not(:last-child) {
+  text-align: left;
+}
+
+.table td:last-child,
+.table th:last-child {
+  text-align: right;
+}
+
+.destination {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.amount {
+  font-weight: 600;
+}
+
+.income {
+  color: var(--income);
+}
+
+.expense {
+  color: var(--expense);
+}
+
+.transaction__category {
+  background-color: var(--bg-tertiary);
+  padding: 0.5rem 1rem;
+  border-radius: 16px;
+}

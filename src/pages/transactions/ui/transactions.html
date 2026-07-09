@@ -1,1 +1,36 @@
-<p>transactions works!</p>
+<section class="view">
+  <div class="view__header">
+    <div>
+      <h2 class="view__title">{{ metadata.title }}</h2>
+      <p class="view__subtitle">{{ metadata.subtitle }}</p>
+    </div>
+    <button class="button">
+      <div class="icon">
+        <svg><use href="sprite.svg#plus"></use></svg>
+      </div>
+      <span>Add transaction</span>
+    </button>
+  </div>
+  <section>
+    <div class="filter-bar">
+      <div class="filter-bar__type">
+        <button [class.active]="filterType() === 'all'" (click)="filterByType('all')">All</button>
+        <button [class.active]="filterType() === 'income'" (click)="filterByType('income')">
+          Income
+        </button>
+        <button [class.active]="filterType() === 'expense'" (click)="filterByType('expense')">
+          Expense
+        </button>
+      </div>
+    </div>
+    <div class="panel">
+      <app-transactions-table [transactions]="filteredTransactions()" />
+
+      <div class="pagination">
+        <p class="subtitle pagination__info">
+          Showing 1-4 of {{ transactionService.transactions().length }} transactions
+        </p>
+      </div>
+    </div>
+  </section>
+</section>

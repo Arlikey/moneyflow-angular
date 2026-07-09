@@ -1,8 +1,8 @@
 export const MOCKS_TRANSACTIONS: Transaction[] = [
   {
-    id: "1fe3ebd4543",
+    id: '1fe3ebd4543',
     type: 'income',
-    amount: 231.80,
+    amount: 231.8,
     categoryId: 'Gifting',
     currency: 'USD',
     date: new Date(),
@@ -32,7 +32,7 @@ export const MOCKS_TRANSACTIONS: Transaction[] = [
     amount: 5.99,
     categoryId: 'Entertainment',
     currency: 'USD',
-    date: new Date(),
+    date: new Date(2026, 5, 7),
     description: 'Discord Nitro',
   },
 ];

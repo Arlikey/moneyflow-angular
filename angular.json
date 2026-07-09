@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "pet-project": {
+    "moneyflow": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -56,10 +56,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "pet-project:build:production"
+              "buildTarget": "moneyflow:build:production"
             },
             "development": {
-              "buildTarget": "pet-project:build:development"
+              "buildTarget": "moneyflow:build:development"
             }
           },
           "defaultConfiguration": "development"

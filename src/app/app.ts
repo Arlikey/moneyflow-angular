@@ -10,5 +10,5 @@ import { Sidebar } from '../widgets/sidebar/model/sidebar';
   styleUrls: ['./app.scss'],
 })
 export class App {
-  protected readonly title = signal('pet-project');
+  protected readonly title = signal('moneyflow');
 }

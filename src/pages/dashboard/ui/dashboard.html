@@ -1,45 +1,59 @@
-<section class="stats-grid">
-  <article class="card">
-    <div class="card__top">
-      <p class="card__title">Total balance</p>
-      <div class="card__icon card__balance">
-        <svg><use href="sprite.svg#credit-card"></use></svg>
-      </div>
+<section class="view">
+  <div class="view__header">
+    <div>
+      <h2 class="view__title">{{ metadata.title }}</h2>
+      <p class="view__subtitle">{{ metadata.subtitle }}</p>
     </div>
-    <strong class="card__value">{{ transactionService.totalBalance() | currency: 'USD' }}</strong>
-  </article>
+    <button class="button">
+      <div class="icon">
+        <svg><use href="sprite.svg#plus"></use></svg>
+      </div>
+      <span>Add transaction</span>
+    </button>
+  </div>
+  <section class="stats-grid">
+    <article class="card">
+      <div class="card__top">
+        <p class="card__title">Total balance</p>
+        <div class="icon card__icon card__balance">
+          <svg><use href="sprite.svg#credit-card"></use></svg>
+        </div>
+      </div>
+      <strong class="card__value">{{ transactionService.totalBalance() | currency: 'USD' }}</strong>
+    </article>
 
-  <article class="card">
-    <div class="card__top">
-      <p class="card__title">Monthly income</p>
-      <div class="card__icon card__income">
-        <svg><use href="sprite.svg#arrow-up"></use></svg>
+    <article class="card">
+      <div class="card__top">
+        <p class="card__title">Monthly income</p>
+        <div class="icon card__icon card__income">
+          <svg><use href="sprite.svg#arrow-up"></use></svg>
+        </div>
       </div>
-    </div>
-    <strong class="card__value">{{ transactionService.totalIncome() | currency: 'USD' }}</strong>
-  </article>
+      <strong class="card__value">{{ transactionService.monthlyIncome() | currency: 'USD' }}</strong>
+    </article>
 
-  <article class="card">
-    <div class="card__top">
-      <p class="card__title">Monthly expenses</p>
-      <div class="card__icon card__expenses">
-        <svg><use href="sprite.svg#arrow-down"></use></svg>
+    <article class="card">
+      <div class="card__top">
+        <p class="card__title">Monthly expenses</p>
+        <div class="icon card__icon card__expenses">
+          <svg><use href="sprite.svg#arrow-down"></use></svg>
+        </div>
       </div>
-    </div>
-    <strong class="card__value">{{ transactionService.totalExpense() | currency: 'USD' }}</strong>
-  </article>
-  <article class="card">
-    <div class="card__top">
-      <p class="card__title">Savings rate</p>
-      <div class="card__icon card__savings">
-        <svg><use href="sprite.svg#hand-coins"></use></svg>
+      <strong class="card__value">{{ transactionService.monthlyExpense() | currency: 'USD' }}</strong>
+    </article>
+    <article class="card">
+      <div class="card__top">
+        <p class="card__title">Savings rate</p>
+        <div class="icon card__icon card__savings">
+          <svg><use href="sprite.svg#hand-coins"></use></svg>
+        </div>
       </div>
-    </div>
-    <strong class="card__value">{{ transactionService.savingsRate() | percent }}</strong>
-  </article>
-</section>
-<section class="panels-grid">
-  <app-transactions-panel />
-  <app-spendings-panel />
-  <app-goals-panel />
+      <strong class="card__value">{{ transactionService.savingsRate() | percent }}</strong>
+    </article>
+  </section>
+  <section class="panels-grid">
+    <app-transactions-panel />
+    <app-spendings-panel />
+    <app-goals-panel />
+  </section>
 </section>
